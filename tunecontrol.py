@@ -1,10 +1,12 @@
 import spotipy
 import spotipy.util as util
 import keyboard
+import os
+
 
 # Spotify credentials
-CLIENT_ID = 'f3399e3e175f451589dfd389d237b4bd'
-CLIENT_SECRET = 'c8446fce594a4d14bee1eb22f15fe690'
+CLIENT_ID = os.environ.get('SPOTIFY_CLIENT_ID')
+CLIENT_SECRET = os.environ.get('SPOTIFY_CLIENT_SECRET')
 REDIRECT_URI = 'http://localhost:8888/callback'
 USERNAME = 'burgessmetallica'
 SCOPE = 'user-modify-playback-state'
